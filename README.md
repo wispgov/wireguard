@@ -12,7 +12,7 @@ Generate a WireGuard keypair, as usual:
 
 Register the public half with Cloudflare, changing the fields as appropriate:
 
-`curl -d '{"key":"PASTE_PUBLIC_KEY_HERE", "install_id":"", "warp_enabled":true, "tos":"2019-09-26T00:00:00.000+01:00", "type":"Windows", "locale":"en_GB"}' https://api.cloudflareclient.com/v0a737/reg | tee warp.json`
+`curl -d '{"key":"PASTE_PUBLIC_KEY_HERE", "install_id":"", "warp_enabled":true, "tos":"2019-11-11T00:00:00.000+01:00", "type":"Windows", "locale":"en_GB"}' https://api.cloudflareclient.com/v0a737/reg | tee warp.json`
 
 (`tos` should be the date you read and agreed to their [terms of service](https://www.cloudflare.com/application/terms/))
 
