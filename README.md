@@ -40,7 +40,7 @@ PrivateKey = xxxxxxxxxxxxxxxxxx (generated via genkey's PrivateKey file)
 [Peer]
 PublicKey = yyyyyyyyyyyyyyyyyy (the one found on the warp.json file)
 AllowedIPs = 0.0.0.0/0 (universal allocation of allowed IP Addresses)
-Endpoint = engage.cloudflareclient.com:2408 (can be replaced with the Public IP of the Server in case of Domain Name Change)
+Endpoint = engage.cloudflareclient.com:2408 (can be replaced with the Public IP of the Server)
 ```
 
 **Notes**
