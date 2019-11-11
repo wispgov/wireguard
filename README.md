@@ -1,6 +1,6 @@
 # Connecting to Cloudflare WARP with WireGuard
 
-Cloudflare's WARP VPN uses a slightly modified version of the WireGuard protocol, but it remains backwards compatible with the normal WireGuard client software. This means you can connect to it on platforms which don't yet have an official WARP client, e.g. your computer or [EdgeOS-based router](https://github.com/Lochnair/vyatta-wireguard).
+Cloudflare's WARP VPN uses a slightly modified version of the WireGuard protocol, but it remains backwards compatible with the normal WireGuard client software. This means you can connect to it on platforms which don't yet have an official WARP client, e.g. your computer or [EdgeOS-based router](https://github.com/Lochnair/vyatta-wireguard). Short Tutorial rewritten by Xin Snowflakes, and Fuzzing with the REST API of the Cloudflare Registration.
 
 ## Step 1
 
@@ -51,4 +51,5 @@ Endpoint = engage.cloudflareclient.com:2408 (can be replaced with the Public IP 
 - I don't know what netmask they want for IPv6 so have left that out
 
 
-( C ) - Xin Snowflakes
+
+( C ) - Xin Snowflakes, 09225205353
