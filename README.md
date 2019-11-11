@@ -18,11 +18,11 @@ Register the public half with Cloudflare, changing the fields as appropriate:
 
 ## Step 3
 
-Find the tunnel endpoint:
+Find your 'warp.json' tunnel endpoint.
 
 `jq '.config.peers[0]' warp.json`
 
-and the IP address for your end:
+And the IP address associated for your endpoint in 'warp.json':
 
 `jq '.config.interface.addresses' warp.json`
 
@@ -32,15 +32,15 @@ Construct your WireGuard config file. It should look something like this:
 
 ```
 [Interface]
-Address = 172.16.0.2/12
-ListenPort = 53
-DNS = 1.1.1.1, 1.0.0.1
-PrivateKey = xxxxxxxxxxxxxxxxxx
+Address = 172.16.0.2/32 (this IP is designated with the 'warp.json' IP Address)
+ListenPort = 53 (based on DNS vulnerability)
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4
+PrivateKey = xxxxxxxxxxxxxxxxxx (generated via genkey's PrivateKey file)
 
 [Peer]
-PublicKey = yyyyyyyyyyyyyyyyyy
-AllowedIPs = 0.0.0.0/0
-Endpoint = engage.cloudflareclient.com:2408
+PublicKey = yyyyyyyyyyyyyyyyyy (the one found on the warp.json file)
+AllowedIPs = 0.0.0.0/0 (universal allocation of allowed IP Addresses)
+Endpoint = engage.cloudflareclient.com:2408 (can be replaced with the Public IP of the Server in case of Domain Name Change)
 ```
 
 **Notes**
