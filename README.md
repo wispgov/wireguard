@@ -33,7 +33,8 @@ Construct your WireGuard config file. It should look something like this:
 ```
 [Interface]
 Address = 172.16.0.2/12
-ListenPort = 51820
+ListenPort = 53
+DNS = 1.1.1.1
 PrivateKey = xxxxxxxxxxxxxxxxxx
 
 [Peer]
